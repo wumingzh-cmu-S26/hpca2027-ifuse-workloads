@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "workloads": {
+    "appworld": {
+      "repo_id": "harry1332/hpca2027-agentic-validated-traces-20260711",
+      "revision": "1060cddf60b0db681046632efde8ced539381109",
+      "path": "appworld",
+      "category": "agentic"
+    },
+    "bc": {
+      "repo_id": "harry1332/ifuse-final-datacenter-traces-20260624",
+      "revision": "a06537aabef08dad6e58213022e740209cefdc80",
+      "path": "bc",
+      "category": "graph"
+    },
+    "bfs": {
+      "repo_id": "harry1332/ifuse-final-datacenter-traces-20260624",
+      "revision": "a06537aabef08dad6e58213022e740209cefdc80",
+      "path": "bfs",
+      "category": "graph"
+    },
+    "core_bench": {
+      "repo_id": "harry1332/hpca2027-agentic-validated-traces-20260711",
+      "revision": "1060cddf60b0db681046632efde8ced539381109",
+      "path": "core_bench_tomography_3497606",
+      "category": "agentic"
+    },
+    "dfs": {
+      "repo_id": "harry1332/ifuse-final-datacenter-traces-20260624",
+      "revision": "a06537aabef08dad6e58213022e740209cefdc80",
+      "path": "dfs",
+      "category": "graph"
+    },
+    "duckdb": {
+      "repo_id": "harry1332/hpca2027-database-validated-traces-20260711",
+      "revision": "5a652d307d20bccb3cccfe0b69976b64afb9e237",
+      "path": "duckdb_tpch_q1_sf10",
+      "category": "database"
+    },
+    "leveldb": {
+      "repo_id": "harry1332/hpca2027-database-validated-traces-20260711",
+      "revision": "5a652d307d20bccb3cccfe0b69976b64afb9e237",
+      "path": "leveldb_readrandom",
+      "category": "database"
+    },
+    "mlgym_fmnist": {
+      "repo_id": "harry1332/hpca2027-agentic-validated-traces-20260711",
+      "revision": "1060cddf60b0db681046632efde8ced539381109",
+      "path": "mlgym_fmnist",
+      "category": "agentic"
+    },
+    "pagerank": {
+      "repo_id": "harry1332/ifuse-final-datacenter-traces-20260624",
+      "revision": "a06537aabef08dad6e58213022e740209cefdc80",
+      "path": "pagerank",
+      "category": "graph"
+    },
+    "rocksdb": {
+      "repo_id": "harry1332/ifuse-final-datacenter-traces-20260624",
+      "revision": "a06537aabef08dad6e58213022e740209cefdc80",
+      "path": "rocksdb_readrandom",
+      "category": "database"
+    },
+    "sssp_ego_fb": {
+      "repo_id": "harry1332/ifuse-final-datacenter-traces-20260624",
+      "revision": "a06537aabef08dad6e58213022e740209cefdc80",
+      "path": "sssp_ego_fb",
+      "category": "graph"
+    },
+    "terminal_bench": {
+      "repo_id": "harry1332/hpca2027-agentic-validated-traces-20260711",
+      "revision": "1060cddf60b0db681046632efde8ced539381109",
+      "path": "terminalbench_train_fasttext",
+      "category": "agentic"
+    }
+  },
+  "groups": {
+    "all": [
+      "appworld",
+      "bc",
+      "bfs",
+      "core_bench",
+      "dfs",
+      "duckdb",
+      "leveldb",
+      "mlgym_fmnist",
+      "pagerank",
+      "rocksdb",
+      "sssp_ego_fb",
+      "terminal_bench"
+    ],
+    "agentic": ["appworld", "core_bench", "mlgym_fmnist", "terminal_bench"],
+    "database": ["duckdb", "leveldb", "rocksdb"],
+    "datacenter": ["bc", "bfs", "dfs", "pagerank", "rocksdb", "sssp_ego_fb"],
+    "graph": ["bc", "bfs", "dfs", "pagerank", "sssp_ego_fb"]
+  }
+}
