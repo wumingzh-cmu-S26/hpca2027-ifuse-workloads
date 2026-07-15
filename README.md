@@ -7,11 +7,27 @@ revisions.
 
 ## Install
 
-Install every workload:
+Install the workload entry point from Hugging Face:
+
+```bash
+python3 -m pip install -U huggingface_hub
+hf download harry1332/hpca2027-ifuse-workloads \
+  --type dataset --local-dir hpca2027-ifuse-workloads
+cd hpca2027-ifuse-workloads
+./install.sh
+```
+
+Or clone the GitHub mirror:
 
 ```bash
 git clone https://github.com/wumingzh-cmu-S26/hpca2027-ifuse-workloads.git
 cd hpca2027-ifuse-workloads
+./install.sh
+```
+
+Install every workload:
+
+```bash
 ./install.sh
 ```
 
