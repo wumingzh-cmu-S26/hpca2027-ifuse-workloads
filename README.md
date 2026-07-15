@@ -34,7 +34,7 @@ Install every workload:
 Install selected workloads or a group:
 
 ```bash
-./install.sh appworld duckdb leveldb
+./install.sh appworld leveldb rocksdb
 ./install.sh agentic
 ./install.sh database
 ./install.sh datacenter
@@ -54,7 +54,6 @@ duplicate trace ZIP data.
 | `bfs` | `bfs` | Graph |
 | `core_bench` | `core_bench_tomography_3497606` | Agentic |
 | `dfs` | `dfs` | Graph |
-| `duckdb` | `duckdb_tpch_q1_sf10` | Database |
 | `leveldb` | `leveldb_readrandom` | Database |
 | `mlgym_fmnist` | `mlgym_fmnist` | Agentic |
 | `pagerank` | `pagerank` | Graph |
@@ -67,6 +66,10 @@ current workload database. In this installer it expands to `bc`, `bfs`, `dfs`,
 `pagerank`, `rocksdb`, and `sssp_ego_fb`. If the final list intended a specific
 datacenter benchmark, add its concrete trace name to `workloads.json` rather
 than assigning a fabricated bundle to that alias.
+
+The final evaluation set intentionally excludes TaoBench and DuckDB. TaoBench
+was used only as an engineering smoke test for the runtime I-Fuse mechanism;
+neither workload should appear in final speedup results.
 
 ## Validation
 

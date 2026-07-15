@@ -31,18 +31,21 @@ cd hpca2027-ifuse-workloads
 Install selected workloads or groups:
 
 ```bash
-./install.sh appworld duckdb leveldb
+./install.sh appworld leveldb rocksdb
 ./install.sh agentic
 ./install.sh database
 ./install.sh datacenter
 ```
 
-Canonical concrete workloads are AppWorld, BC, BFS, CORE-Bench, DFS, DuckDB
-TPC-H Q1 SF10, LevelDB readrandom, MLGym Fashion-MNIST, PageRank, RocksDB
-readrandom, SSSP ego-Facebook, and Terminal-Bench FastText.
+Canonical concrete workloads are AppWorld, BC, BFS, CORE-Bench, DFS, LevelDB
+readrandom, MLGym Fashion-MNIST, PageRank, RocksDB readrandom, SSSP
+ego-Facebook, and Terminal-Bench FastText.
 
 `datacenter` is a Scarab suite/group alias rather than a standalone trace. It
 expands to BC, BFS, DFS, PageRank, RocksDB, and SSSP ego-Facebook.
+
+TaoBench and DuckDB are intentionally excluded from the final evaluation set.
+TaoBench was used only as an engineering smoke test for runtime I-Fuse.
 
 Each installed bundle is checked for clustering metadata, selected SimPoint
 files, weights, and replay-ready trace ZIPs. See `workloads.json` for exact

@@ -17,9 +17,9 @@ class InstallerTests(unittest.TestCase):
 
     def test_groups_and_names_are_deduplicated(self) -> None:
         expanded = install_workloads.expand_names(
-            ["database", "duckdb"], self.manifest
+            ["database", "leveldb"], self.manifest
         )
-        self.assertEqual(expanded, ["duckdb", "leveldb", "rocksdb"])
+        self.assertEqual(expanded, ["leveldb", "rocksdb"])
 
     def test_unknown_name_is_rejected(self) -> None:
         with self.assertRaises(SystemExit):

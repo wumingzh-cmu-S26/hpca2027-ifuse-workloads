@@ -12,7 +12,7 @@ with (root / "workloads.json").open() as source:
 workloads = manifest["workloads"]
 groups = manifest["groups"]
 assert manifest["schema_version"] == 1
-assert len(workloads) == 12
+assert len(workloads) == 11
 assert set(groups["all"]) == set(workloads)
 assert len(groups["all"]) == len(set(groups["all"]))
 for group, members in groups.items():
